@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <style>
+        body{ 
+            color: blue;
+        }
+        
+        h1{
+            color: green;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Trecos</title>
+</head>
+<body>
+
+<header>
+    <h1>Cadastro de Trecos</h1>
+</header>
+
+<nav>
+    <a href="{{ url_for('index')}}">Início</a>
+    <a href=" {{ url_for('new_thing') }}">Novo</a>
+    <a href=" {{url_for('about') }}">Sobre</a>
+</nav>
+<hr>
+<main>
+    {# O comnteúdo do temolate da rota aparece aqui! #}
+    {% block main %}{% endblock %}
+</main>
+<hr>
+
+<footer>&copy;  2026 Cadastro de Trecos</footer>
+
+</body>
+</html>
