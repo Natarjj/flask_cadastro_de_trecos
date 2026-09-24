@@ -1,30 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <style>
-        body{ 
-            color: blue;
+        body{
+            background-image: url('/static/img/img.02.jpg');
+            opacity: 15;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
         }
-        
+
+
         h1{
             color: green;
+            
         }
+
+        h2{
+            color: aliceblue;
+        }
+        
+        p{
+            color: aliceblue;
+        }
+
+      footer{
+         color: aliceblue
+        };
+
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro e Trecos</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('index')}}">Início</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('new_thing') }}">Novo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('about') }}">Sobre</a>
+      </li>
+    </ul>
 
+</div>
+
+</nav>
 <header>
     <h1>Cadastro de Trecos</h1>
 </header>
 
-<nav>
-    <a href="{{ url_for('index')}}">Início</a>
-    <a href=" {{ url_for('new_thing') }}">Novo</a>
-    <a href=" {{url_for('about') }}">Sobre</a>
-</nav>
+
 <hr>
 <main>
     {# O comnteúdo do temolate da rota aparece aqui! #}
@@ -33,6 +66,6 @@
 <hr>
 
 <footer>&copy;  2026 Cadastro de Trecos</footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
