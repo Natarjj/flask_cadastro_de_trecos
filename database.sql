@@ -1,12 +1,15 @@
+-- Cria o banco de dados "database.db" --
+
 -- 1) Apaga a tabela. CUIDADO! Só faça isso em desenvolvimento
 DROP TABLE IF EXISTS thing;
 
 -- 2) Cria a tabela "profile"
 CREATE TABLE thing (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP,
     name TEXT,
 	description TEXT,
-    location TEXT,
+    location TEXT, 
 	photo TEXT,
 	status TEXT CHECK (status IN ('on', 'off', 'del')) DEFAULT 'on'
 );
